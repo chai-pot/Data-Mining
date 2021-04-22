@@ -1,0 +1,65 @@
+=== Model information ===
+
+Filename:     Lab02_Tuheena.model
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     iris
+Attributes:   5
+              sepallength
+              sepalwidth
+              petallength
+              petalwidth
+              class
+
+=== Classifier model ===
+
+J48 pruned tree
+------------------
+
+petalwidth <= 0.6: Iris-setosa (50.0)
+petalwidth > 0.6
+|   petalwidth <= 1.7
+|   |   petallength <= 4.9: Iris-versicolor (48.0/1.0)
+|   |   petallength > 4.9
+|   |   |   petalwidth <= 1.5: Iris-virginica (3.0)
+|   |   |   petalwidth > 1.5: Iris-versicolor (3.0/1.0)
+|   petalwidth > 1.7: Iris-virginica (46.0/1.0)
+
+Number of Leaves  : 	5
+
+Size of the tree : 	9
+
+
+=== Re-evaluation on test set ===
+
+User supplied test set
+Relation:     iris
+Instances:     unknown (yet). Reading incrementally
+Attributes:   5
+
+=== Predictions on user test set ===
+
+    inst#     actual  predicted error prediction
+        1        1:? 1:Iris-setosa       1 
+        2        1:? 3:Iris-virginica       1 
+        3        1:? 2:Iris-versicolor       0.979 
+
+=== Summary ===
+
+Total Number of Instances                0     
+Ignored Class Unknown Instances                  3     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 ?        ?        ?          ?        ?          ?        ?         ?         Iris-setosa
+                 ?        ?        ?          ?        ?          ?        ?         ?         Iris-versicolor
+                 ?        ?        ?          ?        ?          ?        ?         ?         Iris-virginica
+Weighted Avg.    ?        ?        ?          ?        ?          ?        ?         ?         
+
+=== Confusion Matrix ===
+
+ a b c   <-- classified as
+ 0 0 0 | a = Iris-setosa
+ 0 0 0 | b = Iris-versicolor
+ 0 0 0 | c = Iris-virginica
+
